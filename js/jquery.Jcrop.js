@@ -56,7 +56,7 @@
     //}}}
     function mouseAbs(e) //{{{
     {
-      return [(e.pageX - docOffset[0]), (e.pageY - docOffset[1])];
+      return [(e.pageX - docOffset[0])/(options.zoom||1), (e.pageY - docOffset[1])/(options.zoom||1)];
     }
     //}}}
     function setOptions(opt) //{{{
