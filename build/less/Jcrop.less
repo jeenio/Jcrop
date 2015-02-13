@@ -39,23 +39,24 @@
 .jcrop-holder {
   direction: ltr;
   text-align: left;
+  background: transparent!important;
 
   /* IE10 touch compatibility */ -ms-touch-action: none;
 }
 
 /* Selection Border */
 .jcrop-vline, .jcrop-hline {
-  background: @selectionBackground;
+  //background: @selectionBackground;
   font-size: 0;
   position: absolute;
 }
 .jcrop-vline {
   height: 100%;
-  width: @selectionBorderWidth !important;
+  //width: @selectionBorderWidth !important;
   &.right { right: 0; }
 }
 .jcrop-hline{
-  height: @selectionBorderWidth !important;
+  //height: @selectionBorderWidth !important;
   width: 100%;
   &.bottom { bottom: 0; }
 }
@@ -74,12 +75,10 @@
 /* Selection Handles */
 
 .jcrop-handle {
-
-  background-color: @handleBackgroundColor;
-  border: @handleBorderWidth @handleBorderColor @handleBorderStyle;
-  width: @handleSize;
-  height: @handleSize;
-  font-size: 1px;
+  background-color: #fff;
+  border: 2px solid #000;
+  width: 12px;
+  height: 12px;
 
   &.ord-n {left:50%;margin-left:@handleOffset;margin-top:@handleOffset;top:0;}
   &.ord-s {bottom:0;left:50%;margin-bottom:@handleOffset;margin-left:@handleOffset;}
