@@ -256,7 +256,7 @@
     //}}}
     function newTracker() //{{{
     {
-      var trk = $('<div></div>').addClass(cssClass('tracker'));
+      var trk = $('<div></div>').addClass(cssClass('tracker')).addClass(cssClass('select'));
       if (is_msie) {
         trk.css({
           opacity: 0,
