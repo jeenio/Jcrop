@@ -256,7 +256,7 @@
     //}}}
     function newTracker() //{{{
     {
-      var trk = $('<div></div>').addClass(cssClass('tracker')).addClass(cssClass('select'));
+      var trk = $('<div></div>').addClass(cssClass('tracker'));
       if (is_msie) {
         trk.css({
           opacity: 0,
@@ -330,8 +330,8 @@
         
         
         $div = $('<div />').width(boundx).height(boundy).addClass(cssClass('holder')).css({
-        position: 'relative',
-        backgroundColor: options.bgColor
+        position: 'relative'
+        //,backgroundColor: options.bgColor // при редактировании прозрачной картинки просвечивает
       }).insertAfter($origimg).append($img);
 
     if (options.addClass) {
@@ -1089,7 +1089,7 @@
         cursor: 'move',
         position: 'absolute',
         zIndex: 360
-      });
+      }).addClass(cssClass('select'));
 
       if (Touch.support) {
         $track.bind('touchstart.jcrop', Touch.createDragger('move'));
